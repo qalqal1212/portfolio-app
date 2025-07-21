@@ -3,18 +3,21 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import { ToastContainer } from 'react-toastify';
 
 import './index.css'; // Ensure Tailwind CSS is imported
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ToastContainer />
       <Navigation />
       <Routes className="hidden md:flex">
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      
     </div>
   );
 }
