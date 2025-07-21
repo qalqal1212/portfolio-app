@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run postbuild",
+    "postbuild": "rimraf docs && mkdir docs && cp -r dist/* docs/ && cp docs/index.html docs/404.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
